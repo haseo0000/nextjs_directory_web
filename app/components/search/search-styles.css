@@ -1,0 +1,25 @@
+.search_container {
+  background-color: rgb(236, 228, 228);
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 1rem;
+
+  display: flex;
+  align-items: center;
+  padding-inline: 1rem;
+  justify-content: space-around;
+}
+
+input {
+  outline: none;
+  width: 80%;
+  padding: 1rem 0rem;
+  font-size: 1.25em;
+  font-weight: bold;
+  background: transparent;
+}
+
+input[type="text"] {
+  border: none;
+}

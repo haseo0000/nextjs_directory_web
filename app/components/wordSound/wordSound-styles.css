@@ -1,0 +1,30 @@
+.word_sound_container {
+  margin-top: 1rem;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.word_pronous,
+.word {
+  grid-column: 1 / 2;
+}
+
+.play_sound {
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+  justify-self: flex-end;
+
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 50px;
+  aspect-ratio: 1;
+}

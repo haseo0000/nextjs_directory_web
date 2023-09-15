@@ -1,0 +1,48 @@
+.word_meaning_container {
+  margin-top: 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.word_type {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  & h3 {
+    white-space: nowrap;
+  }
+}
+
+.word_type_line {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+}
+
+.meaning {
+  margin-top: 1rem;
+}
+
+.meaning_list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.example_para {
+  margin-top: 0.5rem;
+  color: rgb(161, 160, 160);
+}
+
+.synonyms {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.synonym_purple {
+  color: palevioletred;
+}

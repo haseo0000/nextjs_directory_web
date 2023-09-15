@@ -1,0 +1,30 @@
+.navbar_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar_right_container {
+  display: flex;
+  align-items: center;
+}
+
+.selection {
+  border: none;
+  padding-right: 0.25rem;
+}
+
+.line {
+  width: 1px;
+  height: 30px;
+  margin: 0 1rem 0 0.5rem;
+  background-color: gray;
+}
+
+.button {
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  background-color: gray;
+  color: white;
+}
