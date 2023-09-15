@@ -8,13 +8,15 @@ import { WordContext } from "../../context/wordContext";
 
 function Search() {
   const [searchWord, setSearchWord] = useState("");
-  const { handleSetData, handleSetError } = useContext(WordContext);
+  const { handleSetData, handleSetError, handleSetLoading } =
+    useContext(WordContext);
 
   const handleSearch = async () => {
+    if (!searchWord) return;
+
     handleSetError(null);
     handleSetData(null);
-
-    if (!searchWord) return;
+    handleSetLoading(true);
 
     try {
       const res = await fetch(
@@ -27,9 +29,16 @@ function Search() {
 
       const data = await res.json();
       handleSetData(data);
+      handleSetLoading(false);
     } catch (error: any) {
       handleSetError(error.message);
+      handleSetLoading(false);
     }
+  };
+
+  const handleOnkeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key !== "Enter") return;
+    handleSearch();
   };
 
   return (
@@ -37,9 +46,9 @@ function Search() {
       <input
         type="text"
         value={searchWord}
-        onChange={(e) => {
-          setSearchWord(e.target.value);
-        }}
+        onChange={(e) => setSearchWord(e.target.value)}
+        onKeyDown={handleOnkeyDown}
+        placeholder="Enter some word..."
       />
       <Image
         className="search"

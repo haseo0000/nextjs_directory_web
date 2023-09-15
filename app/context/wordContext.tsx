@@ -8,6 +8,8 @@ type Context = {
   handleSetData: (word: wordResponse | null) => void;
   error: string | null;
   handleSetError: (error: any) => void;
+  loading: boolean;
+  handleSetLoading: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 type Props = {
@@ -19,6 +21,7 @@ export const WordContext = createContext<Context>({} as Context);
 function WordProviders({ children }: Props) {
   const [data, setData] = useState<wordResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleSetError = (error: any) => {
     setError(error);
@@ -61,7 +64,14 @@ function WordProviders({ children }: Props) {
 
   return (
     <WordContext.Provider
-      value={{ data, handleSetData, error, handleSetError }}>
+      value={{
+        data,
+        handleSetData,
+        error,
+        handleSetError,
+        loading,
+        handleSetLoading: setLoading,
+      }}>
       {children}
     </WordContext.Provider>
   );
