@@ -20,11 +20,3 @@
   margin: 0 1rem 0 0.5rem;
   background-color: gray;
 }
-
-.button {
-  border: none;
-  border-radius: 25px;
-  padding: 0.5rem 1rem;
-  background-color: gray;
-  color: white;
-}

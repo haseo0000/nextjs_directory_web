@@ -73,6 +73,11 @@
   }
 } */
 
+:root {
+  --font-color-light-mode: black;
+  --background-color-light-mode: white;
+}
+
 * {
   box-sizing: border-box;
   /* padding: 0; */
@@ -86,13 +91,8 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--font-color-light-mode);
+  background-color: var(--background-color-light-mode);
 }
 
 a {
@@ -108,4 +108,9 @@ a {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+}
+
+.darkMode {
+  --font-color-light-mode: white;
+  --background-color-light-mode: black;
 }

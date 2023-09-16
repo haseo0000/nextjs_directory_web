@@ -19,14 +19,14 @@ function WordSound({ data }: Props) {
 
   return (
     <div className="word_sound_container">
-      <h2 className="word">{data?.word}</h2>
-      {data?.phonetic && (
+      <h2 className="word">{data.word}</h2>
+      {data.phonetic && (
         <>
-          <h3 className="word_pronous">{data?.phonetic}</h3>
+          <h3 className="word_pronous">{data.phonetic}</h3>
           <button className="play_sound" onClick={handlePlaySound}>
             <Image src={PlayIcon} alt={"play icon"} width={15} />
+            <audio ref={ref} src={data.audio} />
           </button>
-          <audio ref={ref} src={data?.audio} />
         </>
       )}
     </div>

@@ -4,11 +4,11 @@ import WordProviders from "./context/wordContext";
 
 export default function Home() {
   return (
-    <div className="container">
+    <section>
       <WordProviders>
         <Search />
         <Word />
       </WordProviders>
-    </div>
+    </section>
   );
 }

@@ -53,13 +53,11 @@ function WordProviders({ children }: Props) {
   };
 
   const getMeanings = (meanings: any) => {
-    return meanings.map((item: any) => {
-      return {
-        partOfSpeech: item.partOfSpeech,
-        definitions: item.definitions,
-        synonyms: item.synonyms,
-      };
-    });
+    return meanings.map((item: any) => ({
+      partOfSpeech: item.partOfSpeech,
+      definitions: item.definitions,
+      synonyms: item.synonyms,
+    }));
   };
 
   return (

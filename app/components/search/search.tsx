@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import "./search-styles.css";
 import React, { useState, useContext } from "react";
+
+import "./search-styles.css";
 import SearchIcon from "../../assets/search.svg";
+
 import { WordContext } from "../../context/wordContext";
 
 function Search() {
