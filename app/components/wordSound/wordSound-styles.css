@@ -17,14 +17,17 @@
   grid-row: 1 / -1;
   justify-self: flex-end;
 
-  width: fit-content;
-  height: fit-content;
   border: none;
-  background-color: blueviolet;
+  background-color: rgb(138, 43, 226);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100%;
   width: 50px;
   aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.play_sound:active {
+  background-color: rgb(72, 10, 129);
 }

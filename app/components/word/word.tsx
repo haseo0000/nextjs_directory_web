@@ -10,12 +10,18 @@ import { WordContext } from "../../context/wordContext";
 function word() {
   const { data, error, loading } = useContext(WordContext);
 
-  if (loading)
+  if (loading) {
     return (
       <div className="loading_container">
-        <ReactLoading type={"spin"} color={"black"} width={100} height={100} />
+        <ReactLoading
+          type={"spin"}
+          width={100}
+          height={100}
+          className="loading_spin_color"
+        />
       </div>
     );
+  }
 
   if (error) return <p>{error}</p>;
   if (!data) return;

@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 import "./navbar-styles.css";
-import BookIcon from "../../assets/book.svg";
-import { MoonIcon } from "../../assets/moon";
+
+import { BookIcon, MoonIcon } from "../../assets";
 
 import Toggle from "../toggle/toggle";
 
@@ -14,7 +14,8 @@ function Navbar() {
 
   return (
     <nav className="navbar_container">
-      <Image src={BookIcon} alt="Icon book" width={50} height={50} />
+      {/* <Image src={BookIcon} alt="Icon book" width={50} height={50} /> */}
+      <BookIcon />
       <div className="navbar_right_container">
         <select
           value={select}
@@ -25,7 +26,7 @@ function Navbar() {
           <option value="1">list1</option>
           <option value="2">list2</option>
         </select>
-        <div className="line"></div>
+        <span className="line"></span>
         <Toggle />
         <MoonIcon />
       </div>

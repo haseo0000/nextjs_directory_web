@@ -7,6 +7,7 @@ import "./search-styles.css";
 import SearchIcon from "../../assets/search.svg";
 
 import { WordContext } from "../../context/wordContext";
+import fetchWord from "../../util/fetch_word";
 
 function Search() {
   const [searchWord, setSearchWord] = useState("");
@@ -20,22 +21,15 @@ function Search() {
     handleSetData(null);
     handleSetLoading(true);
 
-    try {
-      const res = await fetch(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`
-      );
-
-      if (!res.ok) {
-        throw new Error("Cannot find word");
-      }
-
-      const data = await res.json();
-      handleSetData(data);
+    const { data, error } = await fetchWord(searchWord);
+    if (error) {
+      handleSetError(error);
       handleSetLoading(false);
-    } catch (error: any) {
-      handleSetError(error.message);
-      handleSetLoading(false);
+      return;
     }
+
+    handleSetData(data);
+    handleSetLoading(false);
   };
 
   const handleOnkeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {

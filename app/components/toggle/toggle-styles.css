@@ -11,6 +11,7 @@
   padding: 3px;
   background-color: gray;
   box-sizing: content-box;
+  cursor: pointer;
 }
 
 .toggle_Btn span {
@@ -20,7 +21,7 @@
   border-radius: var(--border-raduis-toggle);
 
   position: absolute;
-  transition: 500ms;
+  transition: 300ms;
 }
 
 #btn {
