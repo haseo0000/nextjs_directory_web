@@ -12,6 +12,14 @@
   grid-column: 1 / 2;
 }
 
+.word {
+  font-size: 3em;
+}
+
+.word_pronous {
+  font-size: 1.5em;
+}
+
 .play_sound {
   grid-column: 2 / -1;
   grid-row: 1 / -1;

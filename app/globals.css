@@ -73,6 +73,23 @@
   }
 } */
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
 :root {
   --font-color-light-mode: black;
   --background-color-light-mode: white;
@@ -81,12 +98,6 @@
 .darkMode {
   --font-color-light-mode: white;
   --background-color-light-mode: black;
-}
-
-* {
-  box-sizing: border-box;
-  /* padding: 0; */
-  margin: 0;
 }
 
 html,
@@ -98,6 +109,10 @@ body {
 body {
   color: var(--font-color-light-mode);
   background-color: var(--background-color-light-mode);
+}
+
+svg {
+  min-width: 40px;
 }
 
 a {
